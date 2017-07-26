@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<script src="js/jquery-1.12.2.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			input,button,select,textarea{outline:none;}/*去掉点击按钮事件的默认框*/
+			/*body{
+				position: relative;
+				top: 0;
+				left: 0;
+			}*/
+			img {/*logo图片  后边跟了一个span*/
+   				 border: 0;
+   				 height: 46px;
+   				 vertical-align: middle;
+   				 /*margin-top:333px;*/
+   				margin-top: 280px;
+   				 margin-left: 580px;
+   				 /*position: absolute;
+    			top: -80px;
+    			left:600px;*/
+}
+   			.log_bg{/* 顶级 父 盒子*/
+   				width: 1366px;
+   				height: 760px;
+   				position: relative;
+   				top: -200px;
+   				left: 0;
+   				/*background-color: red;*/
+   			}		
+ 			.spz{/*注册span的颜色与位置设定*/
+ 				display: block;
+ 				color: #FFFFFF;
+ 				font-weight: 800;
+ 				font-size: 28px;
+ 				margin-top: -36px;
+ 				margin-left: 710px;
+ 				/*position: relative;*/
+ 				/*top: 120px;
+ 				left: 60%;*/
+ 			}
+ 			.conten{/*空白区域*/
+ 				width: 380px;
+ 				height: 420px;
+ 				border: 1px solid #f9f3fc;
+ 				background-color: #FFFFFF;
+ 				margin-top: 49px;
+ 				margin-left: 494px;
+ 				/*position: absolute;
+ 				top: 166px;
+ 				left: 500px;*/
+ 			}
+ 			.sp1{
+ 				display: block;
+ 				height: 20px;
+ 				line-height: 2px;
+ 				border-bottom: 2px solid green;
+ 				color: green;
+ 				text-align: center;
+ 				margin-top: 30px;
+ 			}
+ 			.show{
+ 				color: green;
+ 				font-size: 16px;
+ 				display: block;
+ 				text-align: center;
+ 			}
+
+		</style>
+		<script src="js/jquery-1.12.2.js"></script>
+	</head>
+	
+	<body style="background-image: url(images/web_bj.jpg);">
+		<!--
+        	注册顶部;
+        -->
+        <script>
+        	
+        </script>
+    	<script>
+    		window.onload = function(){
+    			var txt1 = document.getElementById("txt1");
+    			txt1.style.display = "block";
+    			txt1.style.width="328px";
+    			txt1.style.height= "38px";
+    			txt1.style.marginLeft= "25px";
+    			txt1.style.marginTop = "30px";
+    			txt1.style.fontSize = "15px";
+    			txt1.style.textIndent = "1em";
+    			txt1.style.border ="1px solid #d7d7d7";
+    			
+    			
+    			var txt2 = document.getElementById("txt2");
+    			txt2.style.display = "block";
+    			txt2.style.width="328px";
+    			txt2.style.height= "38px";
+    			txt2.style.marginLeft= "25px";
+    			txt2.style.marginTop = "30px";
+    			txt2.style.fontSize = "15px";
+    			txt2.style.textIndent = "1em";
+    			txt2.style.border ="1px solid #d7d7d7";
+    			
+    			var mi1 = document.getElementById("mi1");
+    			mi1.style.display = "block";
+    			mi1.style.width="260px";
+    			mi1.style.height= "38px";
+    			mi1.style.marginLeft= "25px";
+    			mi1.style.marginTop = "30px";
+    			mi1.style.fontSize = "15px";
+    			mi1.style.textIndent = "1em";
+    			mi1.style.border ="1px solid #d7d7d7";
+    			var mi2 = document.getElementById("mi2");
+    			
+    			mi2.style.display = "block";
+    			mi2.style.width="260px";
+    			mi2.style.height= "38px";
+    			mi2.style.marginLeft= "25px";
+    			mi2.style.marginTop = "30px";
+    			mi2.style.fontSize = "15px";
+    			mi2.style.textIndent = "1em";
+    			mi2.style.border ="1px solid #d7d7d7";
+    			var bt = document.getElementById("bt");
+    				bt.style.display="block";					
+    				bt.style.marginTop = "30px";
+    				bt.style.width = "280px";
+    				bt.style.height= "36px";
+    				bt.style.backgroundColor = "#3f9f5f";
+    				bt.style.borderRadius="20px";
+    				bt.style.marginLeft = "50px";
+    				bt.style.color = "#f3ffe6";
+    				bt.style.fontSize = "18px";
+    				bt.style.hidefocus="hidefocus";
+
+						var p1 = document.getElementById("p1");//sp2提示
+//						sp2.style.display ="block"
+//				var val2 = txt2.value;
+//			txt2.onclick = function(){
+//
+//					var les = /^(13[0-9]|14[57]|15[0-35-9]|17[03678]|18[0-35-9])\d{8}$/;
+//
+//					if(les.test(this.value)){
+//						alert("手机输入正确:")
+//
+//					}else{
+//						alert("手机号码输入有误.")
+//					}
+//
+//				}
+						
+						
+					var val = txt1.value;//账号文本框
+				$("#bt").on("click", function () {
+					var les = /^[a-zA-z][a-zA-Z0-9_]{2,9}$/;
+					if(les.test(txt1.value)	){
+
+					}else{
+						alert("账号违规,请重新输入!");
+						return;
+					};
+					var val2 = txt2.value;
+					var les = /^(13[0-9]|14[57]|15[0-35-9]|17[03678]|18[0-35-9])\d{8}$/;
+
+					if(les.test(val2)){
+					}else{
+						alert("手机号码输入有误.");
+						return;
+					}
+
+					var less = /^[a-zA-z][a-zA-Z0-9_]{6,9}$/;
+
+					var mi1v = mi1.value;
+					if(less.test(mi1v)){
+
+					} else{
+						alert("密码错误,注册失败");
+						return;
+					};
+//					var les = /^[0-9A-Za-z]{6,12}$/
+//					var less = /^[a-zA-z][a-zA-Z0-9_]{2,9}$/;
+					if(mi2.value == mi1v){
+
+					} else{
+						alert("密码不同");
+						return;
+					}
+				})
+				
+    		}
+    	</script>
+    <div class="log_bg">
+        	<a href="#"><img src="images/login_logo2.png" /></a><span class="spz">注册</span><br/>
+        	<div class="conten">
+        		<span class="sp1">账号注册</span>
+        		<!--<span class="sp2"></span>-->
+        	<input type="text" id="txt1" placeholder="请输入正确的用户名,禁止使用数字"onkeyup="this.value=this.value.replace(/[^/da-z_]/ig,'');"/>
+        	<!--<p class="p1">用户名输入正确</p>-->
+        	<!--<p class="hiden">用户名输入错误</p>-->
+        	<input type="text" id="txt2" placeholder="请输入你的手机号码" />
+        	<input type="password" id="mi1" placeholder="请输入您的密码" />
+        	
+        	<input type="password" id="mi2" placeholder="请确认您的密码" />
+        	<input type="button" id="bt"value="注册" />
+        	
+        	
+        	</div>
+        	
+        </div>
+	</body>
+</html>
+
